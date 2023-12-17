@@ -108,4 +108,75 @@ Bitiş Durumu: q3
 
 Bu DFA, girişte belirtilen örnek dizi olan 1010'u tanır. Başlangıç durumu q0'dur ve q3 durumu bitiş durumudur, çünkü örnek dizi tamamlandığında bu duruma geçer.
 
+# KOD:
+
+    import java.util.Scanner;
+    
+    
+    public class Question2 {
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
+    
+            final STATES FINAL_STATE = STATES.Q2;
+            STATES state = STATES.Q0;
+            char letter;
+    
+            System.out.print("Kelime: ");
+            String word = scanner.next().toUpperCase();
+            
+            for (int i = 0; i < word.length(); i++) {
+                letter = word.charAt(i);
+                
+                if(letter != 'A' && letter != 'B'){
+                    System.out.println("Hatali karakter!");
+                    System.exit(0);
+                }
+                
+                if(state == STATES.Q0){
+                    if(letter == 'A'){
+                        state = STATES.Q1;
+                    }
+                    else{
+                        state = STATES.Q0;
+                    }
+                }
+                else if(state == STATES.Q1){
+                    if(letter == 'A'){
+                        state = STATES.Q1;
+                    }
+                    else{
+                        state = STATES.Q2;
+                    }
+                }
+                else if(state == STATES.Q2){
+                    if(letter == 'A'){
+                        state = STATES.Q3;
+                    }
+                    else{
+                        state = STATES.Q0;
+                    }
+                }
+                else{
+                    if(letter == 'A'){
+                        state = STATES.Q3;
+                    }
+                    else{
+                        state = STATES.Q2;
+                    }
+                }
+            }
+            
+            if(state == STATES.Q2)  System.out.println(word + " ototmata tarafindan taninir.");
+            else    System.out.println(word + " ototmata tarafindan taninmaz.");
+            
+        }
+    }
+    
+    enum STATES{
+        Q0,
+        Q1,
+        Q2,
+        Q3
+    }
+
 Bu örnekler, farklı durumlar arasındaki geçişleri ve bir otomatın belirli bir dildeki dizileri nasıl tanıyabileceğini göstermektedir. Gösterilen tablolar, belirli bir dilin tanınması için kullanılabilecek temel bir DFA'nın yapılarını sunmaktadır.
