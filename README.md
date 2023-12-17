@@ -16,7 +16,7 @@ Bitiş Durumu: q0
 
 Bu DFA, girişteki her 0 için q0 durumunda kalır ve her 1 için q1 durumuna geçer. Başlangıç durumu q0'dur ve çift sayıyı tanıyan bir otomat olduğu için q0 durumu bitiş durumudur.
 
-# Kod:
+## Kod:
 
     
     import java.util.Scanner;
@@ -70,10 +70,7 @@ Bu DFA, girişteki her 0 için q0 durumunda kalır ve her 1 için q1 durumuna ge
     }
 
 
-
-## Örnek 2: "AB" Dizisini Tanıyan Otomat
-
-## İçinde "AB" Bulunan Kelimeleri Tanıyan Otomat
+## Örnek 2: İçinde "AB" Bulunan Kelimeleri Tanıyan Otomat
 
 Alfabe: {A, B}  
 Durumlar: {q0, q1, q2, q3}  
@@ -89,7 +86,7 @@ Bitiş Durumu: q2
 
 Bu DFA, içinde "AB" dizisini bulunduran kelimeleri tanır. Girişteki her A harfinde bir durum ilerler ve ardından B harfi geldiğinde q2 durumuna geçer. Başlangıç durumu q0'dur ve q2 durumu bitiş durumudur, çünkü "AB" dizisini içeren kelimeleri tanıyan bir otomat olarak tanımlanmıştır.
 
-# KOD:
+## KOD:
 
     import java.util.Scanner;
     
@@ -161,7 +158,7 @@ Bu DFA, içinde "AB" dizisini bulunduran kelimeleri tanır. Girişteki her A har
     }
 
 
-## '1010' Dizisini Tanıyan Otomat
+## KOD3: '1010' Dizisini Tanıyan Otomat
 
 Durumlar:
 - q0: Başlangıç durumu
