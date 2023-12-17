@@ -158,24 +158,4 @@ Bu DFA, içinde "AB" dizisini bulunduran kelimeleri tanır. Girişteki her A har
     }
 
 
-## KOD3: '1010' Dizisini Tanıyan Otomat
-
-Durumlar:
-- q0: Başlangıç durumu
-- q1: İlk '1' karakterini görmüş durum
-- q2: '10' dizisini görmüş durum
-- q3: Bitiş durumu ('1010' dizisini tamamlamış durum)
-
-Geçişler:
-| Durumlar | 0   | 1   |
-|----------|-----|-----|
-| q0       | q0  | q1  |
-| q1       | q0  | q2  |
-| q2       | q3  | q1  |
-| q3       | q3  | q3  |
-
-Bu DFA, girişte belirtilen örnek dizi olan '1010' dizisini tanır. Başlangıç durumu q0'dur ve q3 durumu bitiş durumudur, çünkü örnek dizi tamamlandığında bu duruma geçer. Her durum, belirli bir girişten sonra hangi duruma geçileceğini belirtir ve örnek dizi bu durumlar ve geçişler doğrultusunda kabul edilir.
-
-## Kod:
-
 Bu örnekler, farklı durumlar arasındaki geçişleri ve bir otomatın belirli bir dildeki dizileri nasıl tanıyabileceğini göstermektedir. Gösterilen tablolar, belirli bir dilin tanınması için kullanılabilecek temel bir DFA'nın yapılarını sunmaktadır.
