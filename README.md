@@ -18,14 +18,16 @@ Bu DFA, girişteki her 0 için q0 durumunda kalır ve her 1 için q1 durumuna ge
 
 # Kod:
 
+    
     import java.util.Scanner;
     
     public class Question1 {
+    
         public static void main(String[] args) {
             Scanner scanner = new Scanner(System.in);
     
-            final String FINAL_STATE = "q0";
-            String state = "q0";
+            final STATES FINAL_STATE = STATES.Q0;
+            STATES state = STATES.Q1;
             char letter;
     
             System.out.print("Sayi: ");
@@ -33,34 +35,40 @@ Bu DFA, girişteki her 0 için q0 durumunda kalır ve her 1 için q1 durumuna ge
     
             for (int i = 0; i < word.length(); i++) {
                 letter = word.charAt(i);
-                System.out.println(letter + "  " + state);
+    
                 if (letter != '0' && letter != '1') {
                     System.out.println("Yanlis karakter!");
                     System.exit(0);
                 }
     
-                if (state.equals("q0")) {
+                if (state == STATES.Q0) {
                     if (letter == '0') {
-                        state = "q0";
+                        state = STATES.Q0;
                     } else {
-                        state = "q1";
+                        state = STATES.Q1;
                     }
                 } else {
                     if (letter == '0') {
-                        state = "q0";
+                        state = STATES.Q0;
                     } else {
-                        state = "q1";
+                        state = STATES.Q1;
                     }
                 }
             }
     
-            if (state.equals(FINAL_STATE)) {
-                System.out.println(word + " çift sayıdır.");
+            if (state == FINAL_STATE) {
+                System.out.println(word + " cift sayidir.");
             } else {
-                System.out.println(word + " tek sayıdır.");
+                System.out.println(word + " tek sayidir.");
             }
         }
     }
+    
+    enum STATES{
+        Q0,
+        Q1
+    }
+
 
 
 ## Örnek 2: "AB" Dizisini Tanıyan Otomat
