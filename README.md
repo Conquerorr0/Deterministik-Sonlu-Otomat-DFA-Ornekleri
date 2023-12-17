@@ -16,8 +16,9 @@ Bitiş Durumu: q0
 
 Bu DFA, girişteki her 0 için q0 durumunda kalır ve her 1 için q1 durumuna geçer. Başlangıç durumu q0'dur ve çift sayıyı tanıyan bir otomat olduğu için q0 durumu bitiş durumudur.
 
-#Kod:
+# Kod:
 '''
+
 import java.util.Scanner;
 
 public class Question1 {
