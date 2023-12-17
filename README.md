@@ -182,5 +182,70 @@ Bu otomat, belirli kurallara uyan ardışık olarak artan veya azalan sayı dizi
 
 Bu otomat, girişteki sayı dizisini inceleyerek ardışık olarak artan veya azalan bir sıra içerip içermediğini kontrol eder. Başlangıç durumu q0'dur ve q2 durumu bitiş durumudur, çünkü artan veya azalan bir sayı dizisini içeren girişleri tanıyan bir otomat olarak tanımlanmıştır.
 
+## Kod:
+
+    import java.util.Scanner;
+    
+    public class Question3 {
+    
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
+    
+            final STATES FINAL_STATE = STATES.Q2;
+            STATES state = STATES.Q0;
+    
+            System.out.print("Sayı: ");
+            String word = scanner.next();
+    
+            for (int i = 0; i < word.length() - 1; i++) {
+                char letter = word.charAt(i);
+                char nextLetter = word.charAt(i + 1);
+    
+                if (letter < '0' || letter > '9') {
+                    System.out.println("Hatalı karakter!");
+                    System.exit(0);
+                }
+    
+                int num = Character.getNumericValue(letter);
+                int nextNum = Character.getNumericValue(nextLetter);
+    
+                if (state == STATES.Q0) {
+                    if (num < nextNum) {
+                        state = STATES.Q1;
+                    } else if (num > nextNum) {
+                        state = STATES.Q2;
+                    } 
+                    else {
+                        System.out.println(word + " otomat tarafından tanınmaz.");
+                        System.exit(0);
+                    }
+                } else if (state == STATES.Q1) {
+                    if (num > nextNum) {
+                        state = STATES.Q2;
+                    } else if (num == nextNum) {
+                        System.out.println(word + " otomat tarafından tanınmaz.");
+                        System.exit(0);
+                    }
+                } else {
+                    System.out.println(word + " otomat tarafından tanınmaz.");
+                    System.exit(0);
+                }
+            }
+    
+            if (state == FINAL_STATE || state == STATES.Q1) {
+                System.out.println(word + " otomat tarafından tanınır.");
+            } else {
+                System.out.println(word + " otomat tarafından tanınmaz.");
+            }
+        }
+    }
+    
+    enum STATES {
+        Q0,
+        Q1,
+        Q2
+    }
+
+
 
 Bu örnekler, farklı durumlar arasındaki geçişleri ve bir otomatın belirli bir dildeki dizileri nasıl tanıyabileceğini göstermektedir. Gösterilen tablolar, belirli bir dilin tanınması için kullanılabilecek temel bir DFA'nın yapılarını sunmaktadır.
