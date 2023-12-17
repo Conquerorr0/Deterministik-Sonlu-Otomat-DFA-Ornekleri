@@ -21,14 +21,7 @@ Bu DFA, girişteki her 0 için q0 durumunda kalır ve her 1 için q1 durumuna ge
 
 import java.util.Scanner;
 
-//Çift Sayıları Tanıyan Otomat {İkilik sayı sistemine göre}
 
-/*
-        Alfabe: {0, 1} (İkili sayılar)
-        Durumlar: {q0, q1}
-        Başlangıç Durumu: q0
-        Bitiş Durumu: q0 
- */
 public class Question1 {
 
     public static void main(String[] args) {
