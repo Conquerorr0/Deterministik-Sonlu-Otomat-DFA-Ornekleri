@@ -157,5 +157,30 @@ Bu DFA, içinde "AB" dizisini bulunduran kelimeleri tanır. Girişteki her A har
         Q3
     }
 
+## Örnek 3: Artan veya Azalan Sayıları Tanıyan Otomat
+
+Bu otomat, belirli kurallara uyan ardışık olarak artan veya azalan sayı dizilerini tanır.
+
+- **Alfabe:** {0, 1, 2, 3, 4, 5, 6, 7, 8, 9} (Sayılar)
+- **Durumlar:** {q0, q1, q2}
+- **Başlangıç Durumu:** q0
+- **Bitiş Durumu:** q2
+
+### Kurallar
+
+- Girişteki sayılar artan bir sırayla ise ("123", "34567", vb.) otomat kabul eder.
+- Girişteki sayılar azalan bir sırayla ise ("987", "65432", vb.) otomat kabul eder.
+- Aynı sayı birden fazla kez tekrar ederse kabul edilmez ("112", "4554", vb.).
+
+### Durum Geçişleri
+
+| Durumlar       | 0-9 (Giriş)         |
+|----------------|---------------------|
+| q0 (Başlangıç) | q1 (Artan) veya q2 (Azalan) |
+| q1 (Artan)     | q1 (Artan) veya q2 (Azalan) |
+| q2 (Azalan)    | q2 (Azalan) veya q1 (Artan) |
+
+Bu otomat, girişteki sayı dizisini inceleyerek ardışık olarak artan veya azalan bir sıra içerip içermediğini kontrol eder. Başlangıç durumu q0'dur ve q2 durumu bitiş durumudur, çünkü artan veya azalan bir sayı dizisini içeren girişleri tanıyan bir otomat olarak tanımlanmıştır.
+
 
 Bu örnekler, farklı durumlar arasındaki geçişleri ve bir otomatın belirli bir dildeki dizileri nasıl tanıyabileceğini göstermektedir. Gösterilen tablolar, belirli bir dilin tanınması için kullanılabilecek temel bir DFA'nın yapılarını sunmaktadır.
