@@ -1,0 +1,1 @@
+# Deterministik-Sonlu-Otomat-DFA-rnekleri
