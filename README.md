@@ -86,7 +86,7 @@ Bitiş Durumu: q2
 
 Bu DFA, içinde "AB" dizisini bulunduran kelimeleri tanır. Girişteki her A harfinde bir durum ilerler ve ardından B harfi geldiğinde q2 durumuna geçer. Başlangıç durumu q0'dur ve q2 durumu bitiş durumudur, çünkü "AB" dizisini içeren kelimeleri tanıyan bir otomat olarak tanımlanmıştır.
 
-### KOD:
+### Kod:
 
     import java.util.Scanner;
     
@@ -176,6 +176,6 @@ Geçişler:
 
 Bu DFA, girişte belirtilen örnek dizi olan '1010' dizisini tanır. Başlangıç durumu q0'dur ve q3 durumu bitiş durumudur, çünkü örnek dizi tamamlandığında bu duruma geçer. Her durum, belirli bir girişten sonra hangi duruma geçileceğini belirtir ve örnek dizi bu durumlar ve geçişler doğrultusunda kabul edilir.
 
-### KOD:
+### Kod:
 
 Bu örnekler, farklı durumlar arasındaki geçişleri ve bir otomatın belirli bir dildeki dizileri nasıl tanıyabileceğini göstermektedir. Gösterilen tablolar, belirli bir dilin tanınması için kullanılabilecek temel bir DFA'nın yapılarını sunmaktadır.
