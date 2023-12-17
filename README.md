@@ -17,22 +17,10 @@ Bitiş Durumu: q0
 Bu DFA, girişteki her 0 için q0 durumunda kalır ve her 1 için q1 durumuna geçer. Başlangıç durumu q0'dur ve çift sayıyı tanıyan bir otomat olduğu için q0 durumu bitiş durumudur.
 
 #Kod:
-
-
-
+'''
 import java.util.Scanner;
 
-//Çift Sayıları Tanıyan Otomat {İkilik sayı sistemine göre}
-
-/*
-        Alfabe: {0, 1} (İkili sayılar)
-        Durumlar: {q0, q1}
-        Başlangıç Durumu: q0
-        Bitiş Durumu: q0 
- */
-
 public class Question1 {
-
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -45,7 +33,7 @@ public class Question1 {
 
         for (int i = 0; i < word.length(); i++) {
             letter = word.charAt(i);
-
+            System.out.println(letter + "  " + state);
             if (letter != '0' && letter != '1') {
                 System.out.println("Yanlis karakter!");
                 System.exit(0);
@@ -67,9 +55,9 @@ public class Question1 {
         }
 
         if (state.equals(FINAL_STATE)) {
-            System.out.println(word + " cift sayidir.");
+            System.out.println(word + " çift sayıdır.");
         } else {
-            System.out.println(word + " tek sayidir.");
+            System.out.println(word + " tek sayıdır.");
         }
     }
 }
