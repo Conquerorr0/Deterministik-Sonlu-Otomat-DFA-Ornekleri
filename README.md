@@ -73,17 +73,22 @@ Bu DFA, girişteki her 0 için q0 durumunda kalır ve her 1 için q1 durumuna ge
 
 ## Örnek 2: "AB" Dizisini Tanıyan Otomat
 
-Alfabe: {A, B}
-Durumlar: {q0, q1, q2, q3}
-Başlangıç Durumu: q0
-Bitiş Durumu: q2
+## İçinde "AB" Bulunan Kelimeleri Tanıyan Otomat
 
-Durumlar	A	B
-q0	q1	q0
-q1	q1	q2
-q2	q3	q0
-q3	q3	q2
-Bu DFA, girişteki her A harfinde bir durum ilerler ve ardından B harfi geldiğinde q2 durumuna geçer. Başlangıç durumu q0'dur ve q2 durumu bitiş durumudur, çünkü "AB" dizisini içeren kelimeleri tanıyan bir otomat olarak tanımlanmıştır.
+Alfabe: {A, B}  
+Durumlar: {q0, q1, q2, q3}  
+Başlangıç Durumu: q0  
+Bitiş Durumu: q2  
+
+| Durumlar | A   | B   |
+|----------|-----|-----|
+| q0       | q1  | q0  |
+| q1       | q1  | q2  |
+| q2       | q3  | q0  |
+| q3       | q3  | q2  |
+
+Bu DFA, içinde "AB" dizisini bulunduran kelimeleri tanır. Girişteki her A harfinde bir durum ilerler ve ardından B harfi geldiğinde q2 durumuna geçer. Başlangıç durumu q0'dur ve q2 durumu bitiş durumudur, çünkü "AB" dizisini içeren kelimeleri tanıyan bir otomat olarak tanımlanmıştır.
+
 
 ## Örnek 3: Belirli Bir Diziyi Tanıyan Otomat
 
